@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <Form />
     </div>
-  )
+  );
 }
 
 export default App;
