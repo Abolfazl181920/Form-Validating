@@ -93,3 +93,18 @@ input[type="number"]::placeholder {
 .form button:hover {
     background-color: var(--buttonhover);
 }
+
+.accept {
+    height: 3.5rem;
+    width: 8rem;
+    background-color: var(--formback);
+    border-style: none;
+    color: var(--text);
+    font-weight: 700;
+    border-radius: .3rem;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    box-shadow: 0 5px 10px #111111, 0 3px 3px #111111;
+    cursor: pointer;
+}
