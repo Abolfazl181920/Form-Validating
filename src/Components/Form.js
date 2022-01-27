@@ -6,6 +6,7 @@ const Form = () => {
     const [ firstName, setFirstName ] = useState('');
     const [ lastName, setLastName ] = useState('');
     const [ charity, setCharity ] = useState('');
+    const [ valid, setValid ] = useState(false);
 
     const handleFirstName = (event) => {
         setFirstName(event.target.value);
@@ -20,8 +21,10 @@ const Form = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (firstName !== "" && lastName !== "" && charity >= 1000) {
+            setValid(true);
             alert('ok');
         } else {
+            setValid(false);
             alert('no');
         }
     }
@@ -50,7 +53,9 @@ const Form = () => {
                 />
             </div>
             <button>Submit</button>
-            <Charitable firstName={firstName} lastName={lastName} />
+            {
+                valid ? <Charitable firstName={firstName} lastName={lastName} charity={charity} /> : null
+            }
         </form>
     );
 }

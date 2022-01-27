@@ -6,6 +6,7 @@
 
 body {
     background-color: var(--bodyback);
+    scroll-behavior: smooth;
 }
 
 :root {
