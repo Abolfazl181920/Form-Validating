@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-// import Form from './Components/Form';
+import Form from './Components/Form';
 
 const App = () => {
-
-  const [ login, setLogin ] = useState(false);
-
   return (
     <div>
-      <button className="accept">Login</button>
-      {/* <Form /> */}
+      <Form />
     </div>
   );
 }
