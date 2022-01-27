@@ -93,3 +93,14 @@ input[type="number"]::placeholder {
 .form button:hover {
     background-color: var(--buttonhover);
 }
+
+.charitable {
+    position: absolute;
+    height: 30vh;
+    width: 150%;
+    top: 120%;
+    left: -24%;
+    background-color: var(--formback);
+    box-shadow: 0 3px 7px #111111, 0 2px 2px #111111;
+    border-radius: .4rem;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Charitable from './Charitable';
 
 const Form = () => {
 
@@ -20,6 +21,8 @@ const Form = () => {
         event.preventDefault();
         if (firstName !== "" && lastName !== "" && charity >= 1000) {
             alert('ok');
+        } else {
+            alert('no');
         }
     }
     
@@ -47,6 +50,7 @@ const Form = () => {
                 />
             </div>
             <button>Submit</button>
+            <Charitable firstName={firstName} lastName={lastName} />
         </form>
     );
 }
