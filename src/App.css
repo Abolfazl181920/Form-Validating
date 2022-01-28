@@ -11,7 +11,7 @@ body {
 
 :root {
     --buttonhover: rgb(27, 27, 27);
-    --text: rgb(255, 255, 255);
+    --text: aliceblue;
     --bodyback: rgb(32, 31, 31);
     --formback: #121212;
     --inputback: #222222;
@@ -97,6 +97,7 @@ input[type="number"]::placeholder {
 
 .charitable {
     position: absolute;
+    display: flex;
     height: 30vh;
     width: 150%;
     top: 120%;
@@ -104,4 +105,12 @@ input[type="number"]::placeholder {
     background-color: var(--formback);
     box-shadow: 0 3px 7px #111111, 0 2px 2px #111111;
     border-radius: .4rem;
+}
+
+.charitable h3 {
+    color: var(--text);
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
 }

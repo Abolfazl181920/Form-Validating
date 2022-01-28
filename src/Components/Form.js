@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+
 import Charitable from './Charitable';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
 
     const [ firstName, setFirstName ] = useState('');
     const [ lastName, setLastName ] = useState('');
     const [ charity, setCharity ] = useState('');
-    const [ valid, setValid ] = useState(false);
+    const [ valid, setValid ] = useState(true);
 
     const handleFirstName = (event) => {
         setFirstName(event.target.value);
@@ -22,15 +25,16 @@ const Form = () => {
         event.preventDefault();
         if (firstName !== "" && lastName !== "" && charity >= 1000) {
             setValid(true);
-            alert('ok');
+            toast.dark("Hey 👋, SignUp!");
         } else {
             setValid(false);
-            alert('no');
+            toast.dark("Hey 👋, Can't SignUp!");
         }
     }
     
     return (
         <form onSubmit={handleSubmit} className="form">
+            <ToastContainer />
             <h2>Form Charity</h2>
             <div>
                 <input
