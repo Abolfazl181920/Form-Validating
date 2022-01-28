@@ -10,11 +10,11 @@ import './App.css';
 ReactDOM.render(
   <BrowserRouter>
     <App />
-    <Routes>
-        <Route path="/" element={ <App /> } exact />
-        <Route path="/form" element={ <Form /> } />
-        <Route path="/charitables" element={ <Charitable /> } />
-    </Routes>
+    <Route path="/">
+        <Route index element={ <App /> } exact />
+        <Route path="form" element={ <Form /> } />
+        <Route path="charitables" element={ <Charitable /> } />
+    </Route>
   </BrowserRouter>,
   document.getElementById('root')
 );
